@@ -6,13 +6,27 @@ const pageModal = require("../models/pageModel");
 exports.getAllPages = async (req, res) => {
 	try {
 		const pages = await pageModal.find();
-		res.json(pages);
+		setTimeout(() => {
+			res.json(pages);
+		}, 1000);
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
 };
 
 // Get page by ID
+exports.getPageById = async (req, res) => {
+	try {
+		const page = await pageModal.findById(req.params.id);
+		if (!page) {
+			return res.status(404).json({ message: "Page not found" });
+		}
+		res.json(page);
+	} catch (err) {
+		res.status(500).json({ message: err.message });
+	}
+};
+// Get page by Name
 exports.getPageByName = async (req, res) => {
 	try {
 		const page = await pageModal.find({ name: req.params.name });
@@ -40,14 +54,15 @@ exports.createPage = async (req, res) => {
 // Update page by ID
 exports.updatePage = async (req, res) => {
 	try {
-		const page = await pageModal.findById(req.params.id);
+		const page = await pageModal.findByIdAndUpdate(
+			req.params.id,
+			req.body
+		);
 		if (!page) {
 			return res.status(404).json({ message: "Page not found" });
 		}
 
-		page.set(req.body);
-		const updatedPage = await page.save();
-		res.json(updatedPage);
+		res.status(200).json(page);
 	} catch (err) {
 		res.status(400).json({ message: err.message });
 	}

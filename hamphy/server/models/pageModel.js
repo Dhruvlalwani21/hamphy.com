@@ -7,6 +7,9 @@ const PagesSchema = new Schema(
 			type: String,
 			required: true,
 		},
+		pageTitle: {
+			type: String,
+		},
 		title: {
 			type: String,
 		},
