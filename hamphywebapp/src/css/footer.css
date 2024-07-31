@@ -1,0 +1,13 @@
+footer{
+    width: 100vw!important;
+    margin-top: 20px;
+
+}
+
+footer ul li a{
+    color: gray;
+    
+}
+.footer-copyrightbrand{
+    color: white;
+}

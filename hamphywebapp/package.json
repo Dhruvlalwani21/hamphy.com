@@ -1,14 +1,11 @@
 {
-  "name": "hamphy",
-  "version": "1.0.0",
+  "name": "hamphywebapp",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@tanstack/react-table": "^8.19.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.7.2",
-    "http-proxy-middleware": "^3.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
@@ -39,14 +36,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "Hamphy.com Website",
-  "main": "app.js",
   "devDependencies": {
     "tailwindcss": "^3.4.7"
-  },
-  "keywords": [
-    "hamphy"
-  ],
-  "author": "dhruvlalwani",
-  "license": "ISC"
+  }
 }

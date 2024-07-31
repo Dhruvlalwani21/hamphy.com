@@ -1,0 +1,126 @@
+/* styles.css */
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #F0F8FF;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+} */
+
+body{
+display:flex;
+align-items:center;
+
+justify-content:center;
+}
+header{
+background:#ffff;
+    width: -webkit-fill-available;
+}
+.container {
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+h3 {
+    text-align: center;
+	margin-bottom: 20px;
+}
+
+#embedForm {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+	margin-right: auto;
+	width: 100%;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+	width: 5%;
+    margin-right: 10px;
+	accent-color: #f73434;
+}
+span[type="button"] {
+	cursor: pointer;
+}
+#generateButton {
+    padding: 10px;
+    background-color: #f73434;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	margin: 20px;
+}
+
+#generateButton:hover {
+    background-color: #eb1c38;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+}
+
+textarea {
+	float: left;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.collapse2 {
+    display: none;
+}
+.collapse2.show {
+    display: inline;
+}
+
+.textarea-container {
+    position: relative;
+    display: inline-block;
+	width: 100%;
+}
+
+.copy-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px 10px;
+  background: #dddddd;
+  color: #333333;
+  outline: none;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+    background-color: #cccccc;
+}
+@media screen and (max-width: 620px) {
+	.container {
+		width: 90%;
+	}
+}
